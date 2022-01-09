@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d435bba7-b3da-4286-bb85-d9eb9576745f">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     mobil.`no` AS mobil_no,
+     mobil.`no_plat` AS mobil_no_plat,
+     mobil.`merek_mobil` AS mobil_merek_mobil,
+     mobil.`harga` AS mobil_harga
+FROM
+     `mobil` mobil]]>
+	</queryString>
+	<field name="mobil_no" class="java.lang.Integer"/>
+	<field name="mobil_no_plat" class="java.lang.String"/>
+	<field name="mobil_merek_mobil" class="java.lang.String"/>
+	<field name="mobil_harga" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="79" uuid="65468717-c78f-49d6-b657-4c52fffdd890"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN MOBIL]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<rectangle>
+				<reportElement x="388" y="15" width="100" height="20" uuid="22c9540c-1d42-44cc-a9da-84df50d01968"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="266" y="15" width="122" height="20" uuid="b1ca4d22-5df9-46a4-82c3-caf4653d9114"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="166" y="15" width="100" height="20" uuid="5904cc1d-9a30-4602-a373-4849a4ec1071"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="66" y="15" width="100" height="20" uuid="2a298356-6ac0-4f9b-a983-c0ceec9c2a1d"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="66" y="15" width="100" height="20" uuid="ecb23b12-f95a-46f1-bd86-e9ad7495412d"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="166" y="15" width="100" height="20" uuid="37f76b7f-8343-4522-bef6-e1062283dc0d"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NO.POL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="266" y="15" width="122" height="20" uuid="d60a9af2-c898-40b6-9995-322fe1a83b47"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[MEREK MOBIL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="388" y="15" width="100" height="20" uuid="a8e4b79b-8ae1-48fa-8ebc-f126712558c8"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[HARGA]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<rectangle>
+				<reportElement x="388" y="-2" width="100" height="17" uuid="89c3610f-3e8c-4173-b314-356f781a5c35"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="266" y="-2" width="122" height="17" uuid="27d66888-4a05-4b9f-befe-bc104ec6dace"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="166" y="-2" width="100" height="17" uuid="c779a92a-961b-4aff-847e-430e0835cfcb"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="66" y="-2" width="100" height="17" uuid="fca594fa-7fbd-442b-a1b0-6885f52d5dc2"/>
+			</rectangle>
+			<textField>
+				<reportElement x="66" y="-3" width="100" height="19" uuid="6ddd26e2-41a0-44ea-8f0c-b63c4c0345ca"/>
+				<textFieldExpression><![CDATA[$F{mobil_no}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="166" y="-3" width="100" height="19" uuid="9f07849b-8ed2-4231-9bb8-a30ed22eebee"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{mobil_no_plat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="266" y="-3" width="122" height="19" uuid="fefe9fbb-0729-4233-980c-83e76bf8433e"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{mobil_merek_mobil}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="388" y="-3" width="100" height="19" uuid="94f994d0-a02b-4656-84fc-1fe587729924"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{mobil_harga}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="27e097c0-fbb1-4958-a715-69dde479ec68">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     penyewa.`no` AS penyewa_no,
+     penyewa.`nama` AS penyewa_nama,
+     penyewa.`alamat` AS penyewa_alamat,
+     penyewa.`no_telepon` AS penyewa_no_telepon,
+     penyewa.`tanggal` AS penyewa_tanggal
+FROM
+     `penyewa` penyewa]]>
+	</queryString>
+	<field name="penyewa_no" class="java.lang.Integer"/>
+	<field name="penyewa_nama" class="java.lang.String"/>
+	<field name="penyewa_alamat" class="java.lang.String"/>
+	<field name="penyewa_no_telepon" class="java.lang.String"/>
+	<field name="penyewa_tanggal" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="64" uuid="591d9261-5f0d-4faa-ba17-f2aa5fd26190"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="32" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN PENYEWA]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="33" splitType="Stretch">
+			<rectangle>
+				<reportElement x="100" y="13" width="100" height="20" uuid="0de7ea5a-3aea-4c48-a82e-7f61fd6e2075"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="13" width="100" height="20" uuid="206f78f2-6fd9-4a89-a25e-fe21dbbeced1"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="5" y="13" width="84" height="20" uuid="37477e18-2dce-418e-b6f3-2347409f4de4"/>
+				<textElement textAlignment="Center">
+					<font isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[NO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="105" y="13" width="89" height="20" uuid="329b2e05-6ac5-4a1f-bf18-9b8eaaa42c00"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NAMA]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="200" y="13" width="116" height="20" uuid="00bab6d9-b93d-44a4-bde9-a30db19b2f67"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="206" y="13" width="101" height="20" uuid="c8c10e8c-af62-490f-a2b8-817ded8333cc"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ALAMAT]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="316" y="13" width="122" height="20" uuid="a47e1db8-e365-49aa-a00d-387dcd5157e8"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="316" y="13" width="122" height="20" uuid="36515bb5-f3e2-4bfe-b21b-ddc04efa730c"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NO_TELEPON]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="438" y="13" width="110" height="20" uuid="af3b8981-f5a6-431c-997a-d2d889d0b9ce"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="438" y="13" width="110" height="20" uuid="073a8256-cb2e-4160-88a6-b574ff680660"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[TANGGAL]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="100" height="21" uuid="08ed6b7b-c77f-4e83-8ef2-a83718f47b3b"/>
+			</rectangle>
+			<textField>
+				<reportElement x="5" y="0" width="90" height="20" uuid="be3d0131-d0a6-4560-b480-5915e7772d95"/>
+				<textFieldExpression><![CDATA[$F{penyewa_no}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="100" y="0" width="100" height="21" uuid="4fa5282f-3054-41ad-9da9-5859a235ba57"/>
+			</rectangle>
+			<textField>
+				<reportElement x="105" y="2" width="89" height="20" uuid="f20312f1-8d8c-43f4-a228-e977e66f7521"/>
+				<textFieldExpression><![CDATA[$F{penyewa_nama}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="200" y="0" width="116" height="21" uuid="65653e6c-48a9-424e-902e-389a5a2d84eb"/>
+			</rectangle>
+			<textField>
+				<reportElement x="204" y="0" width="103" height="20" uuid="419509e5-01b3-4d37-9970-5fe5e82180e9"/>
+				<textFieldExpression><![CDATA[$F{penyewa_alamat}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="316" y="0" width="122" height="21" uuid="b414a61f-d15d-4c14-a662-712dfe53f856"/>
+			</rectangle>
+			<textField>
+				<reportElement x="316" y="0" width="122" height="20" uuid="37cb3dbb-952b-4a1d-9fdf-48454956a2d4"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{penyewa_no_telepon}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="438" y="0" width="110" height="21" uuid="948b7dc6-007a-4fbc-8eca-70836e2e4c03"/>
+			</rectangle>
+			<textField>
+				<reportElement x="438" y="2" width="110" height="20" uuid="0d37d05f-855a-4dad-9906-b43a4a252236"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{penyewa_tanggal}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
